@@ -1,8 +1,11 @@
-version = "1.1.3"
+version = "1.1.4"
 description = "More control over font sizes"
 
 aliucord {
     changelog = """
+        # 1.1.4
+        * Added a setting for timestamp font scale
+
         # 1.1.2
         * Fix username scaling in the chat list
 

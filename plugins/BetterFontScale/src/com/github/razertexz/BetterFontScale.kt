@@ -23,6 +23,7 @@ class BetterFontScale : Plugin() {
                 getViewId("about_me_text") -> settings.getFloat("aboutMeFontScale", 0.0f)
                 getViewId("channel_members_list_item_game") -> settings.getFloat("gameStatusFontScale", 0.0f)
                 getViewId("user_profile_header_custom_status") -> settings.getFloat("profileStatusFontScale", 0.0f)
+                getViewId("chat_list_adapter_item_text_timestamp") -> settings.getFloat("timestampFontScale", 0.0f)
                 else -> 0.0f
             }
 

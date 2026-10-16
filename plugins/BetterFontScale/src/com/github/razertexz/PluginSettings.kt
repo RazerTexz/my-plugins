@@ -37,6 +37,7 @@ class PluginSettings(val settings: SettingsAPI) : SettingsPage() {
         addTextInput(ctx, "About Me Font Scale", "aboutMeFontScale")
         addTextInput(ctx, "Game Status Font Scale", "gameStatusFontScale")
         addTextInput(ctx, "Profile Status Font Scale", "profileStatusFontScale")
+        addTextInput(ctx, "Timestamp Font Scale", "timestampFontScale")
     }
 
     private fun addTextInput(ctx: Context, hint: CharSequence, settingName: String) {
