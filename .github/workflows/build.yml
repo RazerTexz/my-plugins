@@ -1,8 +1,5 @@
 name: Build
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
+on: push
 
 concurrency:
   group: ${{ github.ref }}
@@ -10,18 +7,12 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     permissions:
       contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v7
-
-      - name: Set up Java
-        uses: actions/setup-java@v5
-        with:
-          java-version: 25
-          distribution: temurin
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v6
@@ -31,20 +22,19 @@ jobs:
       - name: Build
         run: |
           chmod +x gradlew
-          ./gradlew make generateUpdaterJson -Dorg.gradle.vfs.watch=false
-
-          install -D -t builds plugins/*/build/outputs/*.zip build/outputs/updater.json
+          ./gradlew make generateUpdaterJson
 
       - name: Publish
-        working-directory: builds
         run: |
+          mkdir builds
+          mv plugins/*/build/outputs/*.zip build/outputs/updater.json builds
+          cd builds
+
           git init
+          git fetch "https://x:${{ github.token }}@github.com/${{ github.repository }}" builds || false && git reset FETCH_HEAD
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}"
-          git fetch --depth 1 --filter=blob:none origin builds || false && git reset FETCH_HEAD
-
           git add .
-          git commit -m "Build $GITHUB_SHA" || exit 0
-          git push origin HEAD:builds
+          git commit -m "chore: publish"
+          git push "https://x:${{ github.token }}@github.com/${{ github.repository }}" HEAD:builds

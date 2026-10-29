@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-for (folder in rootDir.resolve("plugins").listFiles { it.isDirectory }) {
-    include(":plugins:${folder.name}")
+for (plugin in rootDir.resolve("plugins").listFiles { it.isDirectory }) {
+    include(":plugins:${plugin.name}")
 }
