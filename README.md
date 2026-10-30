@@ -1,56 +1,74 @@
 # My Aliucord Plugins
 
 ### [BlockThemCalls](https://github.com/RazerTexz/My-plugins/raw/builds/BlockThemCalls.zip)
+
 Adds a way to "block" calls from other users
 Works with group chat(s) too
 
 ### [BetterFontScale](https://github.com/RazerTexz/My-plugins/raw/builds/BetterFontScale.zip)
+
 More control over font sizes (see plugin settings)
 
 ### [SearchScrollSaver](https://github.com/RazerTexz/My-plugins/raw/builds/SearchScrollSaver.zip)
+
 Saves your scroll position when searching
 
 ### [BetterPlusReacts](https://github.com/RazerTexz/My-plugins/raw/builds/BetterPlusReacts.zip)
+
 Port of [vc-betterplusreacts](https://github.com/Masterjoona/vc-betterplusreacts)
 
 ### [FullUsernames](https://github.com/RazerTexz/My-plugins/raw/builds/FullUsernames.zip)
+
 Prevents username truncation
 
 ### [SwipeToReply](https://github.com/RazerTexz/My-plugins/raw/builds/SwipeToReply.zip)
+
 Swipe to quickly reply!
 
 ### [ReadAllButton](https://github.com/RazerTexz/My-plugins/raw/builds/ReadAllButton.zip)
+
 Adds a button under the Home icon to read all channels
 
 ### [CopyCodeBlocks](https://github.com/RazerTexz/My-plugins/raw/builds/CopyCodeBlocks.zip)
+
 Adds a copy button on multi-line codeblocks!
 
 ### [SwipeActions](https://github.com/RazerTexz/My-plugins/raw/builds/SwipeActions.zip)
+
 Adds swipe actions like swipe to reply or edit
 
 ### [AutoSpoilerAttachments](https://github.com/RazerTexz/My-plugins/raw/builds/AutoSpoilerAttachments.zip)
+
 Automatically marks attachments as spoilers
 
 ### [AttachmentRemover](https://github.com/RazerTexz/My-plugins/raw/builds/AttachmentRemover.zip)
+
 Remove individual attachments from your messages
 
 ### [PluginWeb](https://github.com/RazerTexz/My-plugins/raw/builds/PluginWeb.zip)
+
 A quick way to search for Aliucord plugins
 
 ### [SimpleMessageLogger](https://github.com/RazerTexz/My-plugins/raw/builds/SimpleMessageLogger.zip)
+
 Logs deleted and edited messages. Simpler and lighter than MessageLogger
 
 ### [ThemeWeb](https://github.com/RazerTexz/My-plugins/raw/builds/ThemeWeb.zip)
+
 A quick way to search for Aliucord themes
 
 ### [SilentMessages](https://github.com/RazerTexz/My-plugins/raw/builds/SilentMessages.zip)
+
 Type '@silent' at the start of your message
 
 ### [AliucordStyleSheets](https://github.com/RazerTexz/My-plugins/raw/builds/AliucordStyleSheets.zip)
-(A.S.S) Style Aliucord to your liking!
+
+Style Aliucord to your liking!
 
 ### [MarkdownToolbar](https://github.com/RazerTexz/My-plugins/raw/builds/MarkdownToolbar.zip)
+
 Adds a toolbar below the chat input for quick formatting
 
 ### [Yoink](https://github.com/RazerTexz/My-plugins/raw/builds/Yoink.zip)
+
 Exports loaded channel messages (up to 200) to .txt by long-pressing the channel name at the top
