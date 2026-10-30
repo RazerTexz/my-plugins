@@ -14,6 +14,23 @@ dependencyResolutionManagement {
     }
 }
 
-for (plugin in settingsDir.resolve("plugins").listFiles { it.isDirectory }) {
-    include(":plugins:${plugin.name}")
-}
+include(
+    ":AliucordStyleSheets",
+    ":AttachmentRemover",
+    ":AutoSpoilerAttachments",
+    ":BetterFontScale",
+    ":BetterPlusReacts",
+    ":BlockThemCalls",
+    ":CopyCodeBlocks",
+    ":FullUsernames",
+    ":MarkdownToolbar",
+    ":PluginWeb",
+    ":ReadAllButton",
+    ":SearchScrollSaver",
+    ":SilentMessages",
+    ":SimpleMessageLogger",
+    ":SwipeActions",
+    ":SwipeToReply",
+    ":ThemeWeb",
+    ":Yoink"
+)
