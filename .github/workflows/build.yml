@@ -11,11 +11,8 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v6
+      - uses: actions/checkout@v7
+      - uses: gradle/actions/setup-gradle@v6
         with:
           cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
 
@@ -27,7 +24,7 @@ jobs:
       - name: Publish
         run: |
           mkdir builds
-          mv plugins/*/build/outputs/*.zip build/outputs/updater.json builds
+          mv */build/outputs/*.zip build/outputs/updater.json builds
           cd builds
 
           git init
