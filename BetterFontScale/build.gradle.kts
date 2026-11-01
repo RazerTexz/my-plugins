@@ -1,38 +1,42 @@
-version = "1.1.4"
+version = "1.1.5"
 description = "More control over font sizes"
 
 aliucord {
     changelog = """
+        # 1.1.5
+        * Support for channel category name text
+        * Support for channel name text
+        * Support for voice channel name text
+
         # 1.1.4
-        * Added a setting for timestamp font scale
+        * Support for timestamp text
 
         # 1.1.2
         * Fix username scaling in the chat list
 
         # 1.1.1
-        * Fix font scaling
+        * Fix broken font scaling
 
         # 1.0.7
         * Improved patches
-        * Removed tag font scale setting
+        * Remove support for tag text
 
         # 1.0.6
-        * Added a setting for profile status font scale
+        * Support for profile status text
 
         # 1.0.5
-        * Added a setting for about me font scale
+        * Support for about me text
 
         # 1.0.3
-        * Fixed crashes caused by entering non-numeric values in plugin settings
+        * Fix crash when entering non-numeric values in plugin settings
 
         # 1.0.2
-        * Added settings for username font scale, tag font scale, and game status font scale
+        * Support for username text
+        * Support for tag text
+        * Support for game status text
 
         # 1.0.1
-        * Added a setting for chatbox font scale
-
-        # 1.0.0
-        * Initial version
+        * Support for chatbox text
     """.trimIndent()
 
     author("RazerTexz", 633565155501801472L)
