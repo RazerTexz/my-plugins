@@ -1,19 +1,24 @@
 name: Build
 on: push
-concurrency:
-  group: ${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@main
-      - uses: gradle/actions/setup-gradle@main
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Set up Java
+        uses: actions/setup-java@main
         with:
-          cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
+          java-version: 25
+          distribution: temurin
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@main
+        with:
+          cache-encryption-key: ${{ secrets.CACHE_ENCRYPTION_KEY }}
 
       - name: Build
         run: |
