@@ -153,7 +153,7 @@ internal class PluginWebPage() : SettingsPage() {
         Utils.threadPool.execute {
             val reader = JsonReader(InputStreamReader(Http.Request("https://plugins.aliucord.com/manifest.json").execute().stream()))
             val data = try {
-                GsonUtils.gson.d<List<PluginData>>(reader, object : TypeToken<List<PluginData>>() {}.type).filter { it.name !in PluginManager.plugins }
+                GsonUtils.gson.d<List<PluginData>>(reader, object : TypeToken<List<PluginData>>() {}.type)
             } finally {
                 reader.close()
             }
