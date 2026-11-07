@@ -21,9 +21,7 @@ jobs:
           cache-encryption-key: ${{ secrets.CACHE_ENCRYPTION_KEY }}
 
       - name: Build
-        run: |
-          chmod +x gradlew
-          ./gradlew make generateUpdaterJson
+        run: sh gradlew make generateUpdaterJson
 
       - name: Publish
         run: |
