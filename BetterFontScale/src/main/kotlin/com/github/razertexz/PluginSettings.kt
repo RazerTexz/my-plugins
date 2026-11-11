@@ -1,5 +1,6 @@
 package com.github.razertexz
 
+import android.content.Context
 import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
@@ -22,25 +23,26 @@ class PluginSettings(private val settings: SettingsAPI) : SettingsPage() {
         setActionBarTitle("Better Font Scale")
         setPadding(0)
 
-        addView(TextView(requireContext(), null, 0, R.i.UiKit_Settings_Item_Header).apply {
+        addView(TextView(view.context, null, 0, R.i.UiKit_Settings_Item_Header).apply {
             text = "NOTE: 0 = Use Default Value"
             typeface = context.resources.getFont(0x7F090007)
         })
 
-        addTextInput("Messages", "messagesFontScale")
-        addTextInput("Chatbox", "chatBoxFontScale")
-        addTextInput("Username", "userNameFontScale")
-        addTextInput("About Me", "aboutMeFontScale")
-        addTextInput("Game Status", "gameStatusFontScale")
-        addTextInput("Profile Status", "profileStatusFontScale")
-        addTextInput("Timestamp", "timestampFontScale")
-        addTextInput("Channel Category Name", "channelCategoryName")
-        addTextInput("Channel Name", "channelName")
-        addTextInput("Voice Channel Name", "voiceChannelName")
+        addTextInput(view.context, "Messages", "messagesFontScale")
+        addTextInput(view.context, "Chatbox", "chatBoxFontScale")
+        addTextInput(view.context, "Username", "userNameFontScale")
+        addTextInput(view.context, "About Me", "aboutMeFontScale")
+        addTextInput(view.context, "Game Status", "gameStatusFontScale")
+        addTextInput(view.context, "Profile Status", "profileStatusFontScale")
+        addTextInput(view.context, "Timestamp", "timestampFontScale")
+        addTextInput(view.context, "Channel Category Name", "channelCategoryName")
+        addTextInput(view.context, "Channel Name", "channelName")
+        addTextInput(view.context, "Voice Channel Name", "voiceChannelName")
+        addTextInput(view.context, "Channel Thread Name", "channelThreadName")
     }
 
-    private fun addTextInput(hint: CharSequence, settingName: String) {
-        addView(TextInput(requireContext(), hint, settings.getFloat(settingName, 0.0f).toString(), object : TextWatcher {
+    private fun addTextInput(context: Context, hint: CharSequence, settingName: String) {
+        addView(TextInput(context, hint, settings.getFloat(settingName, 0.0f).toString(), object : TextWatcher {
             override fun afterTextChanged(s: Editable) {
                 s.toString().toFloatOrNull()?.let {
                     settings.setFloat(settingName, it)

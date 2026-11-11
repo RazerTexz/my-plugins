@@ -1,8 +1,11 @@
-version = "1.1.5"
+version = "1.1.6"
 description = "More control over font sizes"
 
 aliucord {
     changelog = """
+        # 1.1.6
+        * Support for channel thread name text
+
         # 1.1.5
         * Support for channel category name text
         * Support for channel name text
@@ -18,7 +21,7 @@ aliucord {
         * Fix broken font scaling
 
         # 1.0.7
-        * Improved patches
+        * Improve patches
         * Remove support for tag text
 
         # 1.0.6

@@ -27,6 +27,7 @@ class BetterFontScale : Plugin() {
                 Utils.getResId("channels_item_category_name", "id") -> settings.getFloat("channelCategoryName", 0.0f)
                 Utils.getResId("channels_item_channel_name", "id") -> settings.getFloat("channelName", 0.0f)
                 Utils.getResId("channels_item_voice_channel_name", "id") -> settings.getFloat("voiceChannelName", 0.0f)
+                Utils.getResId("channels_item_thread_name", "id") -> settings.getFloat("channelThreadName", 0.0f)
                 else -> 0.0f
             }
 
