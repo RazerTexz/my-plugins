@@ -29,11 +29,11 @@ jobs:
           mv */build/outputs/*.zip build/outputs/updater.json builds
           cd builds
 
-          git init
-          git fetch "https://x:${{ github.token }}@github.com/${{ github.repository }}" builds || false && git reset FETCH_HEAD
+          git init -q
+          git fetch -q "https://x:${{ github.token }}@github.com/$GITHUB_REPOSITORY" builds || false && git reset FETCH_HEAD
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add .
           git commit -m "chore: publish"
-          git push "https://x:${{ github.token }}@github.com/${{ github.repository }}" HEAD:builds
+          git push "https://x:${{ github.token }}@github.com/$GITHUB_REPOSITORY" HEAD:builds
